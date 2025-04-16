@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: "DG Agnadeen";
-    src: url("fonts/DGAgnadeen-Regular.ttf") format("truetype");
+    src: url("DGAgnadeen-Regular.ttf") format("truetype");
 }
 
 .dg-agnadeen-regular {

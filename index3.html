@@ -1,0 +1,664 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArabiaBeds - Hotel Bedbank Provider</title>
+  <meta name="description" content="ArabiaBeds - A leading hotel bedbank provider offering competitive rates and exceptional services.">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <style>
+    :root {
+      --primary-color: #755bd7;
+      --accent-color: #ff5375;
+      --light-color: #ffc400;
+      --dark-color: #312f63;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(rgba(151, 131, 16, 0.2), rgba(98, 60, 10, 0.4)), url('/images/lowq-left-side.jpg');
+      background-size: cover;
+      background-position: -10% 25%;
+    }
+    
+    .btn-primary {
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    }
+    
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .card {
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(10, 61, 98, 0.1);
+    }
+    
+    .text-primary {
+      color: var(--primary-color);
+    }
+    
+    .text-accent {
+      color: var(--accent-color);
+    }
+    
+    .bg-primary {
+      background-color: var(--primary-color);
+    }
+    
+    .bg-accent {
+      background-color: var(--accent-color);
+    }
+    
+    .border-accent {
+      border-color: var(--accent-color);
+    }
+  </style>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#312f63',
+            accent: '#ffc400',
+            light: '#F8F9FA',
+            dark: '#212529',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+        }
+      }
+    }
+    
+    // Simple animation for elements when they scroll into view
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
+      
+      function checkScroll() {
+        animatedElements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementTop < windowHeight - 100) {
+            element.classList.add('visible');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', checkScroll);
+      checkScroll(); // Check initially
+    });
+  </script>
+
+<style>
+	#lovable-badge {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		width: 141px;
+		padding: 5px 13px;	
+		background-color: #000;
+		color: #fff;
+		font-size: 12px;
+		border-radius: 5px;
+		font-family: sans-serif;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		z-index: 1000000;
+	}
+</style>
+<meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/24261d6e-1e57-4307-a862-151800d514a6/id-preview-fd88ea36--3270949a-4649-4d55-ba10-9434b65ee1c8.lovable.app-1744838048438.png" /></head>
+<body>
+  <!-- Header and Navigation -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="flex items-center">
+        <div class="text-3xl font-bold text-[#312f63] dg-agnadeen-regular">
+            <span class="text-[#ff5375]">a</span>rabia<span class="text-[#ff5375]">b</span>eds<span class="text-[#ff5375]">.</span>
+        </div>
+      </a>
+      
+      <nav class="hidden md:flex">
+        <ul class="flex space-x-8">
+          <li><a href="#home" class="text-primary hover:text-accent font-medium transition">Home</a></li>
+          <li><a href="#about" class="text-primary hover:text-accent font-medium transition">About</a></li>
+          <li><a href="#services" class="text-primary hover:text-accent font-medium transition">Services</a></li>
+          <li><a href="#testimonials" class="text-primary hover:text-accent font-medium transition">Testimonials</a></li>
+          <li><a href="#contact" class="text-primary hover:text-accent font-medium transition">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="md:hidden text-primary focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden hidden bg-white shadow-lg absolute w-full z-40" id="mobile-menu">
+    <div class="container mx-auto px-4 py-2">
+      <ul class="flex flex-col space-y-3 py-3">
+        <li><a href="#home" class="block text-primary hover:text-accent py-2 font-medium">Home</a></li>
+        <li><a href="#about" class="block text-primary hover:text-accent py-2 font-medium">About</a></li>
+        <li><a href="#services" class="block text-primary hover:text-accent py-2 font-medium">Services</a></li>
+        <li><a href="#testimonials" class="block text-primary hover:text-accent py-2 font-medium">Testimonials</a></li>
+        <li><a href="#contact" class="block text-primary hover:text-accent py-2 font-medium">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-gradient min-h-[60vh] flex items-center text-white">
+    <div class="container mx-auto px-4 py-16">
+      <div class="max-w-2xl ml-auto text-center mb-12">
+        <h1 class="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">
+          The Middle East's Most Powerful <span class="text-accent">Bed Bank</span> Platform
+        </h1>
+        <p class="text-lg md:text-xl mb-8 text-light leading-relaxed">
+          Connect directly with top hotels across Saudi Arabia, the GCC, and global destinations.
+        </p>
+        <a href="#contact" class="btn-primary bg-accent text-primary font-bold py-4 px-8 rounded-lg inline-block text-lg shadow-lg">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">About ArabiaBeds</h2>
+        <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+        <p class="max-w-3xl mx-auto text-lg text-gray-600">
+          We are the best provider of hotel beds with all the variety that our business travelers or holiday travelers may need.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-globe text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Global Reach</h3>
+          <p class="text-gray-600">
+            Access to 450,000+ hotels across the globe, from luxurious 5-star resorts to cozy boutique stays.
+          </p>
+        </div>
+        
+        <div class="card bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll" style="transition-delay: 0.2s;">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-handshake text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Strong Partnerships</h3>
+          <p class="text-gray-600">
+            Long-standing relationships with major hotel chains and independent properties worldwide.
+          </p>
+        </div>
+        
+        <div class="card bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll" style="transition-delay: 0.4s;">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-star text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Premium Service</h3>
+          <p class="text-gray-600">
+            Dedicated support team available 24/7 to assist with all your booking and accommodation needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">Our Services</h2>
+        <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+        <p class="max-w-3xl mx-auto text-lg text-gray-600">
+          A comprehensive suite of services designed to elevate your business and enhance your customer experience.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
+              <i class="fas fa-hotel text-2xl"></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Extensive Hotel Database</h3>
+            <p class="text-gray-600 mb-4">
+              We offer access to over 450,000 hotels worldwide, from luxury chains to boutique properties, ensuring you can find the perfect accommodation for every traveler.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
+              <i class="fas fa-tags text-2xl"></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Competitive Rates</h3>
+            <p class="text-gray-600 mb-4">
+              Our strong industry relationships allow us to provide some of the most competitive rates in the market, helping you maximize your profit margins.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
+              <i class="fas fa-code text-2xl"></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold mb-3 text-primary">API Integration</h3>
+            <p class="text-gray-600 mb-4">
+              Seamless XML API integration with your existing systems, allowing for easy access to our extensive hotel database and booking capabilities.
+            </p>
+          </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
+              <i class="fas fa-headset text-2xl"></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Dedicated Support</h3>
+            <p class="text-gray-600 mb-4">
+              Our experienced team provides round-the-clock assistance to address any questions or issues, ensuring a smooth booking experience for you and your customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Connections Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Our Global Connections</h2>
+        <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+        <p class="max-w-3xl mx-auto text-lg">
+          We have established strong partnerships with leading hotel chains and independent properties worldwide.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 animate-on-scroll">
+        <div class="bg-white/10 backdrop-blur p-6 rounded-lg text-center">
+          <i class="fas fa-building text-4xl text-accent mb-4"></i>
+          <h3 class="font-serif font-bold mb-2">Hotel Chains</h3>
+          <p class="text-white/80">Access to all major international and regional hotel chains.</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur p-6 rounded-lg text-center">
+          <i class="fas fa-house-user text-4xl text-accent mb-4"></i>
+          <h3 class="font-serif font-bold mb-2">Boutique Hotels</h3>
+          <p class="text-white/80">Curated selection of independent and boutique properties.</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur p-6 rounded-lg text-center">
+          <i class="fas fa-umbrella-beach text-4xl text-accent mb-4"></i>
+          <h3 class="font-serif font-bold mb-2">Resorts</h3>
+          <p class="text-white/80">Luxury resorts and vacation destinations worldwide.</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur p-6 rounded-lg text-center">
+          <i class="fas fa-briefcase text-4xl text-accent mb-4"></i>
+          <h3 class="font-serif font-bold mb-2">Business Hotels</h3>
+          <p class="text-white/80">Business-friendly accommodations with necessary amenities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">What Our Clients Say</h2>
+        <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+        <p class="max-w-3xl mx-auto text-lg text-gray-600">
+          Don't just take our word for it - here's what our valued partners have to say about working with ArabiaBeds.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll">
+          <div class="flex items-center mb-6">
+            <div class="text-accent">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6 italic">
+            "ArabiaBeds has been an invaluable partner for our travel agency. Their extensive hotel database and competitive rates have helped us significantly expand our offerings to our customers."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+              <span class="text-primary font-bold">JD</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary">John Doe</h4>
+              <p class="text-sm text-gray-500">Travel Agency CEO</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll" style="transition-delay: 0.2s;">
+          <div class="flex items-center mb-6">
+            <div class="text-accent">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6 italic">
+            "The API integration was seamless and their support team was incredibly helpful throughout the process. We've seen a significant increase in our booking conversion rates since partnering with ArabiaBeds."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+              <span class="text-primary font-bold">JS</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary">Jane Smith</h4>
+              <p class="text-sm text-gray-500">Online Travel Platform</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll" style="transition-delay: 0.4s;">
+          <div class="flex items-center mb-6">
+            <div class="text-accent">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6 italic">
+            "What sets ArabiaBeds apart is their outstanding customer service. Their team is always available to address any issues or questions promptly, making our operations run smoothly."
+          </p>
+          <div class="flex items-center">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+              <span class="text-primary font-bold">RJ</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-primary">Robert Johnson</h4>
+              <p class="text-sm text-gray-500">Hospitality Consultant</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">Get In Touch</h2>
+        <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+        <p class="max-w-3xl mx-auto text-lg text-gray-600">
+          Interested in partnering with ArabiaBeds? We'd love to hear from you! Fill out the form below and one of our representatives will contact you shortly.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="animate-on-scroll">
+          <form class="bg-light p-8 rounded-xl shadow-lg">
+            <div class="mb-6">
+              <label for="name" class="block mb-2 font-medium text-primary">Your Name</label>
+              <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            
+            <div class="mb-6">
+              <label for="email" class="block mb-2 font-medium text-primary">Email Address</label>
+              <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            
+            <div class="mb-6">
+              <label for="company" class="block mb-2 font-medium text-primary">Company Name</label>
+              <input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            
+            <div class="mb-6">
+              <label for="message" class="block mb-2 font-medium text-primary">Message</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary bg-primary text-white hover:bg-primary/90 font-bold py-3 px-8 rounded-lg inline-block transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+        
+        <div class="animate-on-scroll">
+          <div class="h-full flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-serif font-bold mb-6 text-primary">Contact Information</h3>
+              
+              <div class="flex items-start mb-6">
+                <div class="text-accent mr-4 mt-1">
+                  <i class="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">Our Location</h4>
+                  <p class="text-gray-600">
+                    123 Business Avenue<br>
+                    Dubai, United Arab Emirates
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="text-accent mr-4 mt-1">
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">Email Us</h4>
+                  <p class="text-gray-600">
+                    info@arabiabeds.com<br>
+                    support@arabiabeds.com
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start mb-6">
+                <div class="text-accent mr-4 mt-1">
+                  <i class="fas fa-phone-alt text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">Call Us</h4>
+                  <p class="text-gray-600">
+                    +971 4 123 4567<br>
+                    +971 4 765 4321
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8">
+              <h3 class="text-2xl font-serif font-bold mb-6 text-primary">Connect With Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-1">
+          <div class="text-3xl font-bold text-white dg-agnadeen-regular mb-6">
+            <span class="text-[#ff5375]">a</span>rabia<span class="text-[#ff5375]">b</span>eds<span class="text-[#ff5375]">.</span>
+          </div>
+          <p class="text-white/80 mb-4">
+            Your premier hotel bedbank provider, offering access to 450,000+ hotels worldwide with competitive rates and exceptional service.
+          </p>
+        </div>
+        
+        <div class="col-span-1 md:col-span-1">
+          <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-white/80 hover:text-accent transition">Home</a></li>
+            <li><a href="#about" class="text-white/80 hover:text-accent transition">About Us</a></li>
+            <li><a href="#services" class="text-white/80 hover:text-accent transition">Services</a></li>
+            <li><a href="#testimonials" class="text-white/80 hover:text-accent transition">Testimonials</a></li>
+            <li><a href="#contact" class="text-white/80 hover:text-accent transition">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-span-1 md:col-span-1">
+          <h4 class="text-lg font-bold mb-4">Contact Information</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+              <span class="text-white/80">Smart Tower, Riyadh, KSA</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3 text-accent"></i>
+              <span class="text-white/80">hi@arabiabeds.com</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-3 text-accent"></i>
+              <span class="text-white/80">+971 4 123 4567</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-white/60 text-sm mb-4 md:mb-0">
+          &copy; 2025 arabiabeds. All rights reserved.
+        </p>
+        
+        <div class="flex space-x-6">
+          <a href="#" class="text-white/60 hover:text-accent transition">Privacy Policy</a>
+          <a href="#" class="text-white/60 hover:text-accent transition">Terms of Service</a>
+          <a href="#" class="text-white/60 hover:text-accent transition">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Simple JavaScript for interactions -->
+  <script>
+    // Mobile menu toggle
+    document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Mobile menu links - close menu after click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('opacity-100', 'visible');
+        backToTopButton.classList.remove('opacity-0', 'invisible');
+      } else {
+        backToTopButton.classList.remove('opacity-100', 'visible');
+        backToTopButton.classList.add('opacity-0', 'invisible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Form submission prevention (just for demo)
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Form submission functionality would be integrated here!');
+    });
+  </script>
+</body>
+</html>

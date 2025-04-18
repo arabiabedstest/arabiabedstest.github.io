@@ -18,7 +18,8 @@
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
   <!-- Custom Styles -->
   <style>
     :root {
@@ -38,7 +39,7 @@
     }
     
     .hero-gradient {
-      background: linear-gradient(rgba(151, 131, 16, 0.2), rgba(98, 60, 10, 0.4)), url('/lowq-left-side.jpg');
+      background: linear-gradient(rgba(151, 110, 16, 0.2), rgba(98, 60, 10, 0.4)), url('/images/lowq-left-side.jpg');
       background-size: cover;
       background-position: -10% 25%;
     }
@@ -130,26 +131,7 @@
       checkScroll(); // Check initially
     });
   </script>
-
-<style>
-	#lovable-badge {
-		position: fixed;
-		bottom: 10px;
-		right: 10px;
-		width: 141px;
-		padding: 5px 13px;	
-		background-color: #000;
-		color: #fff;
-		font-size: 12px;
-		border-radius: 5px;
-		font-family: sans-serif;
-		display: flex;
-		align-items: center;
-		gap: 4px;
-		z-index: 1000000;
-	}
-</style>
-<meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/24261d6e-1e57-4307-a862-151800d514a6/id-preview-fd88ea36--3270949a-4649-4d55-ba10-9434b65ee1c8.lovable.app-1744838048438.png" /></head>
+</head>
 <body>
   <!-- Header and Navigation -->
   <header class="sticky top-0 z-50 bg-white shadow-md">
@@ -165,7 +147,6 @@
           <li><a href="#home" class="text-primary hover:text-accent font-medium transition">Home</a></li>
           <li><a href="#about" class="text-primary hover:text-accent font-medium transition">About</a></li>
           <li><a href="#services" class="text-primary hover:text-accent font-medium transition">Services</a></li>
-          <li><a href="#testimonials" class="text-primary hover:text-accent font-medium transition">Testimonials</a></li>
           <li><a href="#contact" class="text-primary hover:text-accent font-medium transition">Contact</a></li>
         </ul>
       </nav>
@@ -183,7 +164,6 @@
         <li><a href="#home" class="block text-primary hover:text-accent py-2 font-medium">Home</a></li>
         <li><a href="#about" class="block text-primary hover:text-accent py-2 font-medium">About</a></li>
         <li><a href="#services" class="block text-primary hover:text-accent py-2 font-medium">Services</a></li>
-        <li><a href="#testimonials" class="block text-primary hover:text-accent py-2 font-medium">Testimonials</a></li>
         <li><a href="#contact" class="block text-primary hover:text-accent py-2 font-medium">Contact</a></li>
       </ul>
     </div>
@@ -194,7 +174,7 @@
     <div class="container mx-auto px-4 py-16">
       <div class="max-w-2xl ml-auto text-center mb-12">
         <h1 class="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">
-          The Middle East's Most Powerful <span class="text-accent">Bed Bank</span> Platform
+          The Middle East's Most Powerful <span class="text-accent">Bedbank</span> Platform
         </h1>
         <p class="text-lg md:text-xl mb-8 text-light leading-relaxed">
           Connect directly with top hotels across Saudi Arabia, the GCC, and global destinations.
@@ -209,42 +189,49 @@
   <!-- About Section -->
   <section id="about" class="py-16 bg-light">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-16 animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">About ArabiaBeds</h2>
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">Why Choose ArabiaBeds?</h2>
         <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-        <p class="max-w-3xl mx-auto text-lg text-gray-600">
-          We are the best provider of hotel beds with all the variety that our business travelers or holiday travelers may need.
-        </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div class="card bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll">
           <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-globe text-2xl"></i>
+            <i class="fas fa-handshake text-2xl"></i>
           </div>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Global Reach</h3>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Direct Contracts</h3>
           <p class="text-gray-600">
-            Access to 450,000+ hotels across the globe, from luxurious 5-star resorts to cozy boutique stays.
+            Real-time rates from regional hotels, no intermediaries
           </p>
         </div>
         
         <div class="card bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll" style="transition-delay: 0.2s;">
           <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-handshake text-2xl"></i>
+            <i class="fas fa-earth-europe text-2xl"></i>
           </div>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Strong Partnerships</h3>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Global Reach</h3>
           <p class="text-gray-600">
-            Long-standing relationships with major hotel chains and independent properties worldwide.
+            500+ active buyers including OTAs, DMCs, and wholesalers
           </p>
         </div>
         
         <div class="card bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll" style="transition-delay: 0.4s;">
           <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-star text-2xl"></i>
+            <i class="fas fa-code text-2xl"></i>
           </div>
-          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Premium Service</h3>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary">API Integration</h3>
           <p class="text-gray-600">
-            Dedicated support team available 24/7 to assist with all your booking and accommodation needs.
+            Fast, reliable connections with full documentation
+          </p>
+        </div>
+
+        <div class="card bg-white p-8 rounded-xl shadow-lg text-center animate-on-scroll" style="transition-delay: 0.4s;">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-building-shield text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold mb-4 text-primary">Powered by Almatar Group</h3>
+          <p class="text-gray-600">
+            Backed by one of Saudi Arabia's leading travel brands
           </p>
         </div>
       </div>
@@ -255,10 +242,10 @@
   <section id="services" class="py-16 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16 animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">Our Services</h2>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">About Us</h2>
         <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-        <p class="max-w-3xl mx-auto text-lg text-gray-600">
-          A comprehensive suite of services designed to elevate your business and enhance your customer experience.
+        <p class="max-w-3xl mx-auto text-xl text-gray-600">
+          Revolutionizing Hotel Distribution in the Middle East and Beyond
         </p>
       </div>
       
@@ -266,13 +253,44 @@
         <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
           <div class="flex-shrink-0">
             <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
-              <i class="fas fa-hotel text-2xl"></i>
+              <i class="fas fa-rocket text-2xl"></i>
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Extensive Hotel Database</h3>
+            <h3 class="text-xl font-serif font-bold mb-3 text-primary md:w-3/4">Powered by Almatar</h3>
             <p class="text-gray-600 mb-4">
-              We offer access to over 450,000 hotels worldwide, from luxury chains to boutique properties, ensuring you can find the perfect accommodation for every traveler.
+              ArabiaBeds is the Bedbank division of Almatar Group, created to deliver better hotel distribution across Saudi Arabia, the Gulf, and key global markets. We offer smart tech and local expertise to help hotels and buyers connect, grow, and succeed.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
+              <i class="fas fa-key text-2xl"></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Key Benefits</h3>
+            <ul class="list-disc pl-5 text-gray-600 mb-4">
+                <li class="mb-1">Based in Saudi Arabia, built for the region</li>
+                <li class="mb-1">Direct contracts across KSA, GCC & global destinations</li>
+                <li class="mb-1">24/7 multilingual support</li>
+                <li class="mb-1">Full control over pricing, availability, and performance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
+              <i class="fas fa-bullseye text-2xl"></i>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Our Mission</h3>
+            <p class="text-gray-600 mb-4">
+              To enable scalable and transparent hotel distribution for MENA hospitality using technology and trust.
             </p>
           </div>
         </div>
@@ -280,41 +298,13 @@
         <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
           <div class="flex-shrink-0">
             <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
-              <i class="fas fa-tags text-2xl"></i>
+              <i class="fas fa-lightbulb text-2xl"></i>
             </div>
           </div>
           <div>
-            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Competitive Rates</h3>
+            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Our Vision</h3>
             <p class="text-gray-600 mb-4">
-              Our strong industry relationships allow us to provide some of the most competitive rates in the market, helping you maximize your profit margins.
-            </p>
-          </div>
-        </div>
-        
-        <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
-          <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
-              <i class="fas fa-code text-2xl"></i>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-xl font-serif font-bold mb-3 text-primary">API Integration</h3>
-            <p class="text-gray-600 mb-4">
-              Seamless XML API integration with your existing systems, allowing for easy access to our extensive hotel database and booking capabilities.
-            </p>
-          </div>
-        </div>
-        
-        <div class="flex flex-col md:flex-row gap-6 animate-on-scroll">
-          <div class="flex-shrink-0">
-            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center">
-              <i class="fas fa-headset text-2xl"></i>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-xl font-serif font-bold mb-3 text-primary">Dedicated Support</h3>
-            <p class="text-gray-600 mb-4">
-              Our experienced team provides round-the-clock assistance to address any questions or issues, ensuring a smooth booking experience for you and your customers.
+              To become the most trusted hotel distribution platform in the region, connecting global travel demand with local supply.
             </p>
           </div>
         </div>
@@ -325,124 +315,49 @@
   <!-- Connections Section -->
   <section class="py-16 bg-primary text-white">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-16 animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Our Global Connections</h2>
+      <div class="text-center mb-12 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Travel Distribution Solutions</h2>
         <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-        <p class="max-w-3xl mx-auto text-lg">
-          We have established strong partnerships with leading hotel chains and independent properties worldwide.
-        </p>
       </div>
       
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 animate-on-scroll">
-        <div class="bg-white/10 backdrop-blur p-6 rounded-lg text-center">
-          <i class="fas fa-building text-4xl text-accent mb-4"></i>
-          <h3 class="font-serif font-bold mb-2">Hotel Chains</h3>
-          <p class="text-white/80">Access to all major international and regional hotel chains.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll">
+        <div class="bg-white/10 backdrop-blur p-6 rounded-lg">
+          <h3 class="font-serif font-bold mb-2">For Hotel Partners</h3>
+          <ul class="list-disc pl-5 text-white/80 my-4">
+            <li class="mb-1">Boost your visibility and occupancy</li>
+            <li class="mb-1">Connect instantly with verified global buyers</li>
+            <li class="mb-1">Manage inventory through Extranet or API</li>
+            <li class="mb-1">Dedicated regional support</li>
+          </ul>
         </div>
         
-        <div class="bg-white/10 backdrop-blur p-6 rounded-lg text-center">
-          <i class="fas fa-house-user text-4xl text-accent mb-4"></i>
-          <h3 class="font-serif font-bold mb-2">Boutique Hotels</h3>
-          <p class="text-white/80">Curated selection of independent and boutique properties.</p>
+        <div class="bg-white/10 backdrop-blur p-6 rounded-lg">
+          <h3 class="font-serif font-bold mb-2">For Travel Buyers (OTAs, DMCs, B2B Agents)</h3>
+          <ul class="list-disc pl-5 text-white/80 my-4">
+            <li class="mb-1">Access curated hotel supply across Saudi Arabia, the GCC, and beyond</li>
+            <li class="mb-1">Choose between commissionable or net rate models</li>
+            <li class="mb-1">Flexible cancellation & instant booking confirmations</li>
+            <li class="mb-1">Exclusive inventory, deals & seasonal promotions</li>
+          </ul>
         </div>
         
-        <div class="bg-white/10 backdrop-blur p-6 rounded-lg text-center">
-          <i class="fas fa-umbrella-beach text-4xl text-accent mb-4"></i>
-          <h3 class="font-serif font-bold mb-2">Resorts</h3>
-          <p class="text-white/80">Luxury resorts and vacation destinations worldwide.</p>
+        <div class="bg-white/10 backdrop-blur p-6 rounded-lg">
+          <h3 class="font-serif font-bold mb-2">For Technology Partners</h3>
+          <ul class="list-disc pl-5 text-white/80 my-4">
+            <li class="mb-1">Fast API integration</li>
+            <li class="mb-1">Compatible with major channel managers & PMS platforms</li>
+            <li class="mb-1">CRS and Back Office dashboard options</li>
+            <li class="mb-1">Full documentation and integration support</li>
+          </ul>
         </div>
         
-        <div class="bg-white/10 backdrop-blur p-6 rounded-lg text-center">
-          <i class="fas fa-briefcase text-4xl text-accent mb-4"></i>
-          <h3 class="font-serif font-bold mb-2">Business Hotels</h3>
-          <p class="text-white/80">Business-friendly accommodations with necessary amenities.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="py-16 bg-light">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16 animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-primary">What Our Clients Say</h2>
-        <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-        <p class="max-w-3xl mx-auto text-lg text-gray-600">
-          Don't just take our word for it - here's what our valued partners have to say about working with ArabiaBeds.
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll">
-          <div class="flex items-center mb-6">
-            <div class="text-accent">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-          <p class="text-gray-600 mb-6 italic">
-            "ArabiaBeds has been an invaluable partner for our travel agency. Their extensive hotel database and competitive rates have helped us significantly expand our offerings to our customers."
-          </p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-              <span class="text-primary font-bold">JD</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-primary">John Doe</h4>
-              <p class="text-sm text-gray-500">Travel Agency CEO</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll" style="transition-delay: 0.2s;">
-          <div class="flex items-center mb-6">
-            <div class="text-accent">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-          <p class="text-gray-600 mb-6 italic">
-            "The API integration was seamless and their support team was incredibly helpful throughout the process. We've seen a significant increase in our booking conversion rates since partnering with ArabiaBeds."
-          </p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-              <span class="text-primary font-bold">JS</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-primary">Jane Smith</h4>
-              <p class="text-sm text-gray-500">Online Travel Platform</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="bg-white p-8 rounded-xl shadow-lg animate-on-scroll" style="transition-delay: 0.4s;">
-          <div class="flex items-center mb-6">
-            <div class="text-accent">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-          <p class="text-gray-600 mb-6 italic">
-            "What sets ArabiaBeds apart is their outstanding customer service. Their team is always available to address any issues or questions promptly, making our operations run smoothly."
-          </p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-              <span class="text-primary font-bold">RJ</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-primary">Robert Johnson</h4>
-              <p class="text-sm text-gray-500">Hospitality Consultant</p>
-            </div>
-          </div>
+        <div class="bg-white/10 backdrop-blur p-6 rounded-lg">
+          <h3 class="font-serif font-bold mb-2">Support & Account Management</h3>
+          <ul class="list-disc pl-5 text-white/80 my-4">
+            <li class="mb-1">Dedicated Account Manager</li>
+            <li class="mb-1">Arabic & English 24/7 support</li>
+            <li class="mb-1">Training, onboarding & analytics reports</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -565,7 +480,7 @@
             <span class="text-[#ff5375]">a</span>rabia<span class="text-[#ff5375]">b</span>eds<span class="text-[#ff5375]">.</span>
           </div>
           <p class="text-white/80 mb-4">
-            Your premier hotel bedbank provider, offering access to 450,000+ hotels worldwide with competitive rates and exceptional service.
+            Your premier hotel bedbank provider, offering competitive rates and exceptional service.
           </p>
         </div>
         

@@ -56,3 +56,11 @@
     font-weight: 400;
     font-style: normal;
 }
+
+[data-automation-id="questionItem"] {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1em;
+    margin: 0;
+}

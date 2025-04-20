@@ -53,3 +53,16 @@ async function handleSubmit(event) {
         alert('Form gönderilirken bir hata oluştu.');
     }
 }
+
+// Mobile menu toggle
+document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenu.classList.toggle('hidden');
+});
+
+// Mobile menu links - close menu after click
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.add('hidden');
+  });
+});

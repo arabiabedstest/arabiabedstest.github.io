@@ -27,42 +27,15 @@ tabBtns.forEach(btn => {
     });
 });
 
-async function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-
-    try {
-        const response = await fetch('http://localhost:3001/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-
-        const result = await response.json();
-        if (response.ok) {
-            alert(result.message);
-            event.target.reset(); // Formu temizle
-        } else {
-            alert(result.error);
-        }
-    } catch (error) {
-        console.error('Bir hata oluştu:', error);
-        alert('Form gönderilirken bir hata oluştu.');
-    }
-}
-
 // Mobile menu toggle
 document.querySelector('button.md\\:hidden').addEventListener('click', function() {
-  const mobileMenu = document.getElementById('mobile-menu');
-  mobileMenu.classList.toggle('hidden');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
 });
 
 // Mobile menu links - close menu after click
 document.querySelectorAll('#mobile-menu a').forEach(link => {
-  link.addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.add('hidden');
-  });
+    link.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('hidden');
+    });
 });
